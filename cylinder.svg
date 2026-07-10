@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     width="500" height="400" 
+     viewBox="0 0 500 400">
+  
+  <!-- 定义渐变 -->
+  <defs>
+    <linearGradient id="cylinderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#b0c4de;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e8f4f8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b0c4de;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="topGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f8ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d0e8f0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 圆柱体背景（可选） -->
+  <rect width="500" height="400" fill="#f5f5f5"/>
+  
+  <!-- 圆柱体后部（底部椭圆的后半部分） -->
+  <ellipse cx="250.0" cy="325.0" 
+           rx="100" ry="30.0" 
+           fill="#a0b4c8" />
+  
+  <!-- 圆柱体侧面 -->
+  <rect x="150.0" y="75.0" 
+        width="200" height="250" 
+        fill="url(#cylinderGradient)" />
+  
+  <!-- 圆柱体顶部椭圆 -->
+  <ellipse cx="250.0" cy="75.0" 
+           rx="100" ry="30.0" 
+           fill="url(#topGradient)" 
+           stroke="#88a0b8" stroke-width="1" />
+  
+  <!-- 圆柱体底部椭圆的前半部分（可见部分） -->
+  <path d="M 150.0,325.0 
+           A 100,30.0 0 0,1 350.0,325.0" 
+        fill="none" stroke="#88a0b8" stroke-width="1" />
+  
+  <!-- 侧面轮廓线 -->
+  <line x1="150.0" y1="75.0" 
+        x2="150.0" y2="325.0" 
+        stroke="#88a0b8" stroke-width="1" />
+  <line x1="350.0" y1="75.0" 
+        x2="350.0" y2="325.0" 
+        stroke="#88a0b8" stroke-width="1" />
+  
+  <!-- 标题 -->
+  <text x="250.0" y="30" text-anchor="middle" 
+        font-family="Arial, sans-serif" font-size="18" fill="#333">
+    圆柱体 (Cylinder)
+  </text>
+  
+  <!-- 标注尺寸 -->
+  <text x="250.0" y="380" text-anchor="middle" 
+        font-family="Arial, sans-serif" font-size="12" fill="#666">
+    SVG Generated Cylinder
+  </text>
+  
+</svg>
